@@ -31,3 +31,13 @@ variable "PUBLIC_ROUTE_TABLE" {
 variable "PRIVATE_ROUTE_TABLE" {
   default = "private_route_table"
 }
+variable "INGRESS_PORT" {
+  type    = list(number)
+  default = [22, 80, 443, 5002]
+}
+variable "AMI_ID" {
+  default = "ami-08628ac362a60b73b"
+}
+variable "EC2_NAME" {
+  default = "ec2"
+}

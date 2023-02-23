@@ -13,3 +13,6 @@ PRIVATE_SUBNET_NAME = "PRIVATE_SUBNET_"
 GATEWAY_NAME        = "InternetGateway"
 PUBLIC_ROUTE_TABLE  = "public_route_table"
 PRIVATE_ROUTE_TABLE = "private_route_table"
+
+AMI_ID   = "ami-08628ac362a60b73b"
+EC2_NAME = "ec2"
