@@ -14,5 +14,5 @@ GATEWAY_NAME        = "InternetGateway"
 PUBLIC_ROUTE_TABLE  = "public_route_table"
 PRIVATE_ROUTE_TABLE = "private_route_table"
 
-AMI_ID   = "ami-08628ac362a60b73b"
+AMI_ID   = "ami-06651f06f15be2b71"
 EC2_NAME = "ec2"
