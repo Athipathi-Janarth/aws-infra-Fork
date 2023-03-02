@@ -17,8 +17,31 @@ resource "aws_security_group" "application" {
       self             = false
     }
   ]
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = -1
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   tags = {
     Name = "application"
+  }
+}
+resource "aws_security_group" "database" {
+  name        = "database-sg"
+  description = "Database security group for RDS instances"
+
+  vpc_id = aws_vpc.myVpc.id
+
+  ingress {
+    from_port       = var.RDS_PORT
+    to_port         = var.RDS_PORT
+    protocol        = "tcp"
+    security_groups = [aws_security_group.application.id]
+  }
+
+  tags = {
+    Name = "database"
   }
 }

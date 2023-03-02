@@ -14,5 +14,11 @@ GATEWAY_NAME        = "InternetGateway"
 PUBLIC_ROUTE_TABLE  = "public_route_table"
 PRIVATE_ROUTE_TABLE = "private_route_table"
 
-AMI_ID   = "ami-06651f06f15be2b71"
-EC2_NAME = "ec2"
+AMI_ID      = "ami-008350fac9956b40b"
+EC2_NAME    = "ec2"
+RDS_NAME    = "rds"
+RDS_PORT    = 3306
+ENV         = "dev"
+DB_NAME     = "csye6225"
+DB_PASSWORD = "csye6225"
+DB_USER     = "csye6225"

@@ -41,3 +41,21 @@ variable "AMI_ID" {
 variable "EC2_NAME" {
   default = "ec2"
 }
+variable "RDS_NAME" {
+  default = "rds"
+}
+variable "RDS_PORT" {
+  default = 3306
+}
+variable "ENV" {
+  default = "dev"
+}
+variable "DB_NAME" {
+  default = ""
+}
+variable "DB_PASSWORD" {
+  default = ""
+}
+variable "DB_USER" {
+  default = ""
+}

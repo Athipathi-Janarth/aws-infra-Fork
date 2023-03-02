@@ -4,10 +4,10 @@ Infrastructure creates a public VPC, three public subnets, internet gateway and 
 
 ## `Steps to create a VPC`
 
-- Run command  `tf plan -var-file="dev-variables.tfvars"`
+- Run command  `terraform plan -var-file="dev-variables.tfvars"`
 
-- Run command  `tf apply -var-file="dev-variables.tfvars"`
+- Run command  `terraform apply -var-file="dev-variables.tfvars"`
 
 ## `Steps to delete a VPC`
 
-- Run command  `tf destroy -var-file="dev-variables.tfvars"`
+- Run command  `terraform destroy -var-file="dev-variables.tfvars"`
