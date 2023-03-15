@@ -59,3 +59,9 @@ variable "DB_PASSWORD" {
 variable "DB_USER" {
   default = ""
 }
+variable "HOSTED_ZONE" {
+  default = ""
+}
+variable "APP_PORT" {
+  default = 5002
+}
