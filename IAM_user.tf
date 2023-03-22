@@ -37,6 +37,10 @@ resource "aws_iam_role" "ec2_user" {
     ]
   })
 }
+resource "aws_iam_role_policy_attachment" "CloudWatchAgentServerPolicy_attachment" {
+  role       = aws_iam_role.ec2_user.name
+  policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+}
 resource "aws_iam_role_policy_attachment" "EC2_S3_role_attachment" {
   role       = aws_iam_role.ec2_user.name
   policy_arn = aws_iam_policy.ec2_webapp_s3.arn
