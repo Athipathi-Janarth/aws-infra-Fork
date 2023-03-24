@@ -19,6 +19,7 @@ resource "aws_instance" "ec2_instance" {
     sudo echo "DB_HOST=${aws_db_instance.rds_instance.address}" >> /home/ec2-user/webapp/.env
     sudo echo "AWS_BUCKET_NAME=${aws_s3_bucket.bucket.bucket}" >> /home/ec2-user/webapp/.env
     sudo echo "AWS_BUCKET_REGION=${var.AWS_REGION}" >> /home/ec2-user/webapp/.env
+    sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/home/ec2-user/webapp/AmazonCloudWatchConfig.json -s
     EOF
   tags = {
     Name = var.EC2_NAME
