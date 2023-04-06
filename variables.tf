@@ -65,3 +65,7 @@ variable "HOSTED_ZONE" {
 variable "APP_PORT" {
   default = 5002
 }
+variable "LOAD_BALANCER_INGRESS_PORT" {
+  type    = list(number)
+  default = [80, 443]
+}
