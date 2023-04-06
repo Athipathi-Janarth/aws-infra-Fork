@@ -21,10 +21,12 @@ resource "aws_lb_target_group" "webapp_tg" {
   target_type = "instance"
   vpc_id      = aws_vpc.myVpc.id
 
-  # health_check {
-  #   path     = "/healthz"
-  #   protocol = "HTTP"
-  # }
+  health_check {
+    path     = "/healthz"
+    protocol = "HTTP"
+    interval = 300
+    timeout  = 10
+  }
 }
 resource "aws_autoscaling_attachment" "application_autoscaling_attachment" {
   autoscaling_group_name = aws_autoscaling_group.application.name
