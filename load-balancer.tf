@@ -5,8 +5,11 @@ resource "aws_lb" "webapp_lb" {
 }
 resource "aws_lb_listener" "webapp_listener" {
   load_balancer_arn = aws_lb.webapp_lb.arn
-  port              = 80
-  protocol          = "HTTP"
+  port              = 443
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+
+  certificate_arn = var.CERTIFICATE
 
   default_action {
     target_group_arn = aws_lb_target_group.webapp_tg.arn

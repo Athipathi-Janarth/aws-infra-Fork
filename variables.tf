@@ -69,3 +69,6 @@ variable "LOAD_BALANCER_INGRESS_PORT" {
   type    = list(number)
   default = [80, 443]
 }
+variable "CERTIFICATE" {
+  default = ""
+}
